@@ -11,6 +11,8 @@ const links = [
   ["Contact", "#contact"],
 ];
 
+const resumeLink = "/resume.pdf";
+
 function MenuIcon() {
   return (
     <svg
@@ -69,13 +71,24 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Contact Button */}
-        <a
-          href="#contact"
-          className="hidden rounded-full bg-purple-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-purple-700 hover:shadow-lg hover:shadow-purple-600/30 md:inline-flex"
-        >
-          Let&apos;s Talk <span className="ml-2">↗</span>
-        </a>
+        {/* Desktop Action Buttons */}
+        <div className="hidden items-center gap-3 md:flex">
+          <a
+            href={resumeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-purple-500/60 px-5 py-3 text-sm font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-600 hover:text-white"
+          >
+            Resume ↓
+          </a>
+
+          <a
+            href="#contact"
+            className="rounded-full bg-purple-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-purple-700 hover:shadow-lg hover:shadow-purple-600/30"
+          >
+            Let&apos;s Talk <span className="ml-2">↗</span>
+          </a>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -104,10 +117,22 @@ export default function Navbar() {
               </a>
             ))}
 
+            {/* Mobile Resume Button */}
+            <a
+              href={resumeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-4 rounded-lg border border-purple-500/60 px-5 py-3 text-center text-sm font-semibold text-purple-300 transition hover:bg-purple-600 hover:text-white"
+            >
+              Download Resume ↓
+            </a>
+
+            {/* Mobile Contact Button */}
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-lg bg-purple-600 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-purple-700"
+              className="mt-3 rounded-lg bg-purple-600 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-purple-700"
             >
               Let&apos;s Talk ↗
             </a>
