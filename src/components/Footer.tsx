@@ -97,7 +97,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col items-center justify-between gap-5 pt-8 text-center sm:flex-row sm:text-left">
           <p className="text-xs leading-relaxed text-blue-400/70">
-            © 2026 Rabbi. All rights reserved. Built with Next.js & Tailwind
+            © 2026 Suman. All rights reserved. Built with Next.js & Tailwind
             CSS.
           </p>
 
